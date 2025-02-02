@@ -7,8 +7,18 @@ jobs:
 		- name: get code
 		  uses: actions/checkout@v4
 		- name: test code
-		  run: npm run test 
+		  run: npm run test
+	Build:	
+		runs-on: ubuntu-latest
+		steps:
+		- name: get code
+		  uses: actions/checkout@v4
 		- name: build code
  		  run: npm run build
+	Deploy:
+		runs-on: ubuntu-latest
+		steps:
+		- name: get code
+		  uses: actions/checkout@v4
 		- name: deploy
 		  run: echo "deploying..."	
